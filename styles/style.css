@@ -34,45 +34,55 @@ a {
 
 .products {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  justify-content: center;
 }
 
 .product {
-  width: 300px;
-  
-  border: 1px solid #ddd;
+  width: 250px;
+  height: 350px;
+  background: #fff;
+  border-radius: 10px;
   padding: 15px;
+  border: 1px solid #ddd;
   text-align: center;
-  background: white;
-  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .product img {
-  width: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  height: screen;
-  padding: 90px 0;
+  margin-bottom: 10px;
 }
 
 .product h3 {
-  font-size: 16px;
-  margin: 10px 0;
+  font-size: 15px;
+  margin-bottom: 8px;
+  min-height: 40px;
 }
 
 .product p {
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .product button {
-  padding: 8px 15px;
-  border: none;
   background: #ff6600;
   color: white;
-  cursor: pointer;
+  border: none;
+  padding: 10px 18px;
   border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .product button:hover {
